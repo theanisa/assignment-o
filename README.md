@@ -110,6 +110,38 @@ Clicking **Complete Button**:
 
 ---
 
+## 🧠 React Basics (Answers)
+
+### 1) What is JSX, and why is it used?
+**JSX** is a syntax extension for JavaScript that looks like HTML. It is used in React to describe the UI structure in a readable way. Under the hood, JSX is compiled to `React.createElement` calls, which create the virtual DOM elements.
+
+### 2) What is the difference between State and Props?
+- **Props** are inputs passed from a parent component to a child component. They are read-only and cannot be changed by the receiving component.
+- **State** is owned and managed inside a component. It can be updated using setters like `setState` (or `useState`), and updates cause the component to re-render.
+
+### 3) What is the useState hook, and how does it work?
+`useState` is a React Hook that provides a state variable and a setter function. When you call the setter, React re-renders the component with the new state.
+
+Example:
+```js
+const [count, setCount] = useState(0);
+setCount(count + 1);
+```
+
+### 4) How can you share state between components in React?
+You can share state by lifting it up to a common parent component and passing the state + setter down via props. Another approach is using React Context (`createContext` / `useContext`) or a state management library like Redux.
+
+### 5) How is event handling done in React?
+React uses camelCase event props like `onClick`, `onChange`, etc. You pass a function as the event handler:
+
+```jsx
+<button onClick={() => console.log('clicked')}>Click me</button>
+```
+
+React wraps native browser events with a cross-browser synthetic event system.
+
+---
+
 ## 🔗 Submission
 - **Live Link :** YOUR_DEPLOYED_URL_HERE
 - **GitHub Repository:** YOUR_REPO_URL_HERE
